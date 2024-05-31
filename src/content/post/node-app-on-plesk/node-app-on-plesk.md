@@ -1,6 +1,6 @@
 ---
 title: "Running a small Node server on Plesk"
-description: "Running a node app using PM2 and Apache on Plesk"
+description: "Running a websockets node app using PM2 and Apache on Plesk"
 publishDate: "10 May 2024"
 tags: ["nodejs", "plesk", "apache"]
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Studies at UoPeople"
-description: "A journey to learn and grow"
+description: "A post describing my journey to learn, and grow at the UoPeople"
 publishDate: "10 Sept 2023"
 updatedData: "10 May 2024"
 tags: ["uopeople", "online-learning", "education", "computer-science"]
