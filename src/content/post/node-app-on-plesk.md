@@ -28,7 +28,7 @@ The default paths for the certifcated where inaccessible, and I could not find t
 
 In the end my solution was to use Apache. Apache would read the .htaccess files, and so I though to create an .htaccess file to route traffic.
 
-`
+```
 #########################
 #
 # NODE.JS app running in Apache
@@ -54,4 +54,4 @@ RewriteRule ^$ http://127.0.0.1:3000/ [P,L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
-`
+```
