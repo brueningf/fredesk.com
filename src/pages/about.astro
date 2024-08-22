@@ -3,19 +3,130 @@ import aboutImg from "@/assets/about-astro.png";
 import PageLayout from "@/layouts/Base.astro";
 import { Image } from "astro:assets";
 
+import eliteventsImg from "@/assets/elitevents_01.png";
+import elbikeprojectImg from "@/assets/elbikeproject_01.png";
+import capriShirtImg from "@/assets/caprishirt_01.png";
+import feuerwehrMellenseeImg from "@/assets/fw_01.png";
+import moontexImg from "@/assets/moontex_01.png";
+import db0vipImg from "@/assets/db0vip_01.png";
+import einsatzheldImg from "@/assets/einsatzheld_01.png";
+import piImg from "@/assets/pi_01.png";
+
 const meta = {
 	description: "Info about me",
-	title: "About",
+title: "Portfolio/About",
 };
+
+const work = [
+	{
+		name: "Elitevents",
+    description: "A company website for a Belgian event planning company.",
+		url: "https://elitevents.be",
+		image: eliteventsImg,
+	},
+	{
+		name: "ElBikeProject",
+		description: "A company website for a bike rental and tours agency in Peru",
+		url: "https://elbikeproject.com",
+		image: elbikeprojectImg,
+	},
+	{
+		name: "Capri-Shirt",
+		description: "A company website and online shop for a german print-on-demand company",
+		url: "https://capri-shirt.de",
+		image: capriShirtImg,
+	},
+	{
+		name: "Feuerwehr Mellensee",
+    description: "A website for a fire department in Germany",
+		url: "https://feuerwehr-mellensee.de",
+		image: feuerwehrMellenseeImg,
+	},
+	{
+		name: "Moontex",
+    description: "An online shop based on JTL-Shop with custom plugins for a german textile company",
+		url: "https://moontex.de",
+		image: moontexImg,
+	},
+	{
+		name: "DB0VIP",
+		description: "A wordpress website for telecommunications tech blogging",
+		url: "https://db0vip.de",
+		image: db0vipImg,
+	},
+	{
+		name: "Einsatzheld",
+    description: "An online shop for textile products, and custom plugins dynamic design",
+		url: "https://einsatzheld.de",
+		image: einsatzheldImg,
+	},
+	{
+		name: "Pi",
+    description: "A web app inventory of electronic components with stock management",
+		url: "https://pi.fredesk.com",
+		image: piImg,
+	},
+];
 ---
 
 <PageLayout meta={meta}>
 	<div class="space-y-6">
 		<h1 class="title">About</h1>
 		<p>
-      Hi, I am an engineer and artist. A clean coder and passionate learner.
-      My passion for engineering things came from an early age when exploring circuit boards and computers at my father's workshop. I started my web developer journey in 2012 as a self-learner.
+			Hi, I am an engineer and artist. A clean coder and passionate learner. My passion for
+			engineering things came from an early age when exploring circuit boards and computers at my
+			father's workshop. I started my web developer journey in 2012 as a self-learner.
 		</p>
+		<p>Some of my past work:</p>
+
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+			{
+				work.map((item) => (
+					<a
+						class="rounded-lg border border-gray-200 p-4"
+						href={item.url}
+						target="_blank"
+						rel="noopener"
+					>
+						{item.name} - {item.description}
+						<div class="flex justify-center">
+							<Image alt={item.name} fetchpriority="high" loading="eager" src={item.image} />
+						</div>
+					</a>
+				))
+			}
+		</div>
+
+		<p>Here is some of my experience:</p>
+		<ul class="list-inside list-disc">
+			<li>
+				Basic knowledge in electronics and precision engineering, in theory and practice, computer
+				services, operating systems, maintenance and repairs.
+			</li>
+			<li>
+				Linux user, I have been using Linux as my main operating system since 2016. Ubuntu, RedHat
+				based distros, and Arch
+			</li>
+			<li>
+				Web development, I have been working with HTML, CSS, JavaScript, and PHP since 2014. I have
+				experience with WordPress, Laravel, and Drupal.
+			</li>
+			<li>
+				Frontend development, I have designed, and built websites since 2016. Using Tailwind,
+				Bootstrap, and custom CSS.
+			</li>
+			<li>
+				Backend development, I have experience building backend systems and APIs using Laravel,
+				Express.js, and Django.
+			</li>
+			<li>ML and AI, I have experience working with Python, HuggingFace models and PyTorch.</li>
+			<li>DevOps, I have experience with Docker, Kubernetes, and CI/CD pipelines.</li>
+			<li>
+				Other skills, I have experience with Python, Lua, and Java. I have experience with databases
+				like MySQL, PostgreSQL, SQLite, and MS-SQL Server.
+			</li>
+			<li>Hardware, I have experience with Raspberry Pi, Arduino, and ESP32.</li>
+		</ul>
 		<div class="flex justify-center">
 			<Image
 				alt="A cartoon cactus looking at the 'Astro.build' logo"
@@ -24,29 +135,5 @@ const meta = {
 				src={aboutImg}
 			/>
 		</div>
-		<p>Here is some of my experience:</p>
-		<ul class="list-inside list-disc">
-			<li>Basic knowledge in electronics and precision engineering, in theory and practice, computer services, operating systems, maintenance and repairs.</li>
-      <li>Linux user, I have been using Linux as my main operating system since 2016. Ubuntu, RedHat based distros, and Arch</li>
-      <li>Web development, I have been working with HTML, CSS, JavaScript, and PHP since 2014. I have experience with WordPress, Laravel, and Drupal.</li>
-      <li>Frontend development, I have designed, and built websites since 2016. Using Tailwind, Bootstrap, and custom CSS.</li>
-      <li>Backend development, I have experience building backend systems and APIs using Laravel, Express.js, and Django.</li>
-      <li>ML and AI, I have experience working with Python, HuggingFace models and PyTorch.</li>
-      <li>DevOps, I have experience with Docker, Kubernetes, and CI/CD pipelines.</li>
-      <li>Other skills, I have experience with Python, Lua, and Java. I have experience with databases like MySQL, PostgreSQL, SQLite, and MS-SQL Server.</li>
-      <li>Hardware, I have experience with Raspberry Pi, Arduino, and ESP32.</li>
-		</ul>
-
-		<p>Some of my past work:</p>
-		<ul class="list-inside list-disc">
-      <li><a href="https://elitevents.be" target="_blank" rel="noopener">Elitevents</a> - A website for a Belgian event planning company.</li>
-      <li><a href="https://elbikeproject.com" target="_blank" rel="noopener">ElBikeProject</a> - A website for a local bike rental and tours agency</li>
-      <li><a href="https://capri-shirt.de" target="_blank" rel="noopener">Capri-Shirt</a> - A website and online shop for a german print-on-demand company</li>
-      <li><a href="https://feuerwehr-mellensee.de" target="_blank" rel="noopener">Feuerwehr Mellensee</a> - A website for a german fire department</li>
-      <li><a href="https://moontex.de" target="_blank" rel="noopener">Moontex</a> - A dropshipping website for a german company</li>
-      <li><a href="https://db0vip.de" target="_blank" rel="noopener">DB0VIP</a> - A wordpress website for telecommunications tech blogging</li>
-      <li><a href="https://einsatzheld.de" target="_blank" rel="noopener">Einsatzheld</a> - An online shop for textile products</li>
-      <li><a href="https://pi.fredesk.com" target="_blank" rel="noopener">Pi</a> - A web app inventory of electronic components</li>
-		</ul>
 	</div>
 </PageLayout>
