@@ -10,25 +10,25 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
 
 const cactusTech: { desc: string; href: string; title: string }[] = [
 	{
-    desc: "I used Astro to build this site, and some other headless sites.",
+		desc: "I used Astro to build this site, and some other headless sites.",
 		href: "https://astro.build",
 		title: "Astro",
 	},
 	{
-    desc: "I use Laravel for quick APIs, and web applications.",
+		desc: "I use Laravel for quick APIs, and web applications.",
 		href: "https://laravel.com",
 		title: "Laravel",
 	},
 	{
-    desc: "Prefered CSS framework for my projects.",
+		desc: "Prefered CSS framework for my projects.",
 		href: "https://tailwindcss.com",
 		title: "Tailwind CSS",
 	},
-  {
-    desc: "I use GitHub for version control, and CI/CD.",
-    href: "https://github.com",
-    title: "GitHub",
-  },
+	{
+		desc: "I use GitHub for version control, and CI/CD.",
+		href: "https://github.com",
+		title: "GitHub",
+	},
 ];
 ---
 
@@ -36,7 +36,12 @@ const cactusTech: { desc: string; href: string; title: string }[] = [
 	<section>
 		<h1 class="title mb-6">Hello World!</h1>
 		<p class="mb-4">
-      Opinionated blog, and showcase of my work.
+      Opinionated blog, and showcase of
+      <a
+				class="underline text-accent"
+				data-astro-prefetch
+				href="/about"
+				>my work</a>.
 		</p>
 		<SocialList />
 	</section>

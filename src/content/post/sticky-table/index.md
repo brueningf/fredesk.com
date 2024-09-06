@@ -1,5 +1,5 @@
 ---
-title: "Sticky side and head bars on a HTML table"
+title: "Sticky matrix table"
 description: "How to make a sticky side and head bar on a HTML table"
 publishDate: "05 Sept 2024"
 tags: ["html", "css", "table", "matrix"]
