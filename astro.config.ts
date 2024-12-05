@@ -13,7 +13,7 @@ import { expressiveCodeOptions } from "./src/site.config";
 // https://astro.build/config
 export default defineConfig({
 	// ! Please remember to replace the following site property with your own domain
-	site: "https://astro-cactus.chriswilliams.dev/",
+	site: "https://fredesk.com/",
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
 		rehypePlugins: [
@@ -41,7 +41,7 @@ export default defineConfig({
 		mdx(),
 	],
 	image: {
-		domains: ["webmention.io"],
+		domains: ["webmention.io", "fredesk.com"],
 	},
 	// https://docs.astro.build/en/guides/prefetch/
 	prefetch: true,
